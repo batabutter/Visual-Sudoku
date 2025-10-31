@@ -1,6 +1,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include "Game.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -17,7 +18,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     //glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(800, 800, "LearnOpenGL", NULL, NULL);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -37,11 +38,16 @@ int main()
 
     // This depends on the existence of the window
 
+
+    // Create a game handler
+
+	Game game;
+
     while (!glfwWindowShouldClose(window))
     {
         // input
         
-        // processInput(window);
+		game.processInput(window); // Example input processing
 
         // rendering commands here
         // check and call events and swap the buffers

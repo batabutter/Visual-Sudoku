@@ -129,6 +129,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Documents\glad\src\glad.c" />
+    <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Game.h" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
